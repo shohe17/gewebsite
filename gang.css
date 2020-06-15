@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+}
+
+.header-logo {
+  float: left;
+  padding-left: 100px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+
+}
+
+li {
+  padding-top: 10px;
+  padding-left: 50px;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-right {
+  float: right;
+
+}

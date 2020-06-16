@@ -1,5 +1,86 @@
-* {
-  padding: 0;
+body {
+  margin: 0;
+}
+
+.conteiner {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+}
+ 
+
+.header ul {
+  list-style: none;
+  display: flex;
+
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  padding-left: 40px;
+
+}
+
+.header-list {
+  display: flex;
+  justify-content: flex-end;
+}
+.mission-wrapper {
+  background-image: url(boracay.jpg);
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  color: aliceblue;
+  opacity: 0.5;
+  
+}
+.mission-wrapper:hover {
+  opacity: 1;
+}
+
+.conteiner h1 {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-size: 38px;
+  letter-spacing: 3px;
+
+}
+
+.btn-mission {
+  border: 2px solid rgb(136, 148, 82);
+  text-decoration: none;
+  color: rgb(136, 148, 82);
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.btn-mission:hover {
+  opacity: 1;
+}
+
+.images {
+  display: flex;
+}
+
+main div.animal {
+  width: calc(33.3% - 10px);
+  margin: 5px;
+}
+
+
+/* -----------
+
+body {
+  margin: auto;
 }
 
 .header-logo {
@@ -25,6 +106,38 @@ a {
 }
 
 .header-right {
-  float: right;
+  float: left;
 
 }
+
+.sea-image {
+  width: 100%;
+  opacity: 0.6;
+}
+
+.mission-wrapper {
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.message {
+   position: absolute;
+   top: 12%;
+   width: 100%;
+   color: white;
+}
+
+.btn-mission {
+  position: absolute;
+  top:  50%;
+  width: 25%;
+}
+
+ */
+
+
+/* .sea-image:hover {
+  opacity: 1;
+} */

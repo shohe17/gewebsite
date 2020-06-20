@@ -17,27 +17,41 @@ a {
 
 .header {
   display: flex;
+  height: 60px;
 }
  
 .header-logo {
-  padding: 0px 10px 0px 30px;
+  padding: 10px 50px 0px 60px;
 }
 
 .header ul {
   list-style: none;
   display: flex;
-
-}
-
-.header a {
   padding-left: 40px;
-
 }
 
-.header-list {
-  display: flex;
-  justify-content: flex-end;
+.header li {
+  padding-top: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
+  opacity: 1;
 }
+
+.header li:hover {
+  opacity: 0.7;
+}
+
+.languages {
+  padding-top: 21px;
+  padding-right: 5px;
+  padding-left: 90px;  
+  opacity: 1;
+}
+
+.languages:hover {
+  opacity: 0.7;
+}
+
 .mission-wrapper {
   background-image: url(boracay2.png);
   background-size: cover;
@@ -82,7 +96,7 @@ main div.animal {
 }
 
 .activity-wrapper {
-  height: 800px;
+  height: 850px;
   max-width: 1600px;
 }
 
@@ -125,15 +139,9 @@ main div.animal {
 }
 
 .member-wrapper {
-  /* width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto; */
-  text-align: center;
   height: 880px;
-  justify-content: center;
   position: relative;
   font-size: 20px;
-  text-align: center;
   background-image: url(gogo.jpg);
   background-color:rgba(243, 238, 226, 0.966);
   background-blend-mode:lighten;

@@ -6,18 +6,27 @@ btn1.addEventListener('click',function() {
   res1.classList.add('gold');
 });
 
+Element.onscroll = function() {
+  const scrollTop = this.scrollTop;
+  console.log("縦に移動した位置"+ scrollTop + "100px")
+}
 
 
-// 動かんかったやつ
-// ----------
-// const btn2 = document.querySelector('button2');
-// btn2.addEventListener('click',function() {
+const btn2 = document.querySelector("#button2");
+btn2.addEventListener('mouseover', function() {
 
-//   const res2 = document.querySelector('#res2')
-//   const res3 = document.querySelector('#res3')
-//   const res4 = document.querySelector('#res4')
+  const res2 = document.querySelector('#res2')
+  const res3 = document.querySelector('#res3')
+  const res4 = document.querySelector('#res4')
 
-//   res2.classList.add('hidden');
-//   res3.classList.add('hidden');
-//   res4.classList.add('hidden');
-// });
+  res2.classList.add('hidden');
+  res3.classList.add('hidden');
+  res4.classList.add('hidden');
+});
+
+btn2.addEventListener('mouseleave', function() {
+  const res2 = document.querySelectorAll('#res2');
+
+  res2.classList.remove('hidden');
+
+});

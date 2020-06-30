@@ -53,7 +53,7 @@ a {
 }
 
 .mission-wrapper {
-  background-image: url(boracay2.png);
+  background-image: url(../images/boracay2.png);
   background-size: cover;
   height: 750px;
   width: 100%;
@@ -142,7 +142,7 @@ main div.animal {
   height: 880px;
   position: relative;
   font-size: 20px;
-  background-image: url(gogo.jpg);
+  background-image: url(../images/gogo.jpg);
   background-color:rgba(243, 238, 226, 0.966);
   background-blend-mode:lighten;
 }

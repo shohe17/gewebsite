@@ -13,6 +13,7 @@ Element.onscroll = function() {
 
 
 const btn2 = document.querySelector("#button2");
+console.log(btn2);
 btn2.addEventListener('mouseover', function() {
 
   const res2 = document.querySelector('#res2')
@@ -25,8 +26,27 @@ btn2.addEventListener('mouseover', function() {
 });
 
 btn2.addEventListener('mouseleave', function() {
-  const res2 = document.querySelectorAll('#res2');
+  const res2 = document.querySelectorAll('.res');
+  // 　　　　　HTMLのclass　res意味
+  console.log(res2)
 
-  res2.classList.remove('hidden');
-
+  for (result of res2) {
+    console.log(result);
+    result.classList.remove('hidden');
+  }
 });
+
+// コメントアウトで行の上にかく
+window.onscroll = function(){
+  let a = document.documentElement.scrollTop;
+  console.log(123);
+// ギャング写真のいちまできtら画像表示
+
+
+};
+
+// window.addEventListener( "onscroll", function () {
+//   console.log(123);
+
+
+// });

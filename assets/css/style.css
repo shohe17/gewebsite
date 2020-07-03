@@ -3,7 +3,7 @@ body {
   max-width: 100%;
 }
 
-a {
+.header a {
   text-decoration: none;
   color: black;
 }
@@ -80,6 +80,7 @@ a {
   font-weight: bold;
   font-size: 20px;
   opacity: 0.7;
+  
 }
 
 .btn-mission:hover {
@@ -136,6 +137,8 @@ main div.animal {
   color: black;
   border-radius: 6px 6px 0 0;
   float: right;
+  text-decoration: none;
+  color: black;
 }
 
 .member-wrapper {
@@ -181,6 +184,7 @@ main div.animal {
   position: absolute;
   top:  68%;
   opacity: 1;
+  text-decoration: none;
 }
 
 .btn-team:hover {
@@ -195,6 +199,12 @@ main div.animal {
   text-align: center;
   border-bottom: 7px solid rgba(107, 107, 106, 0.829);
   padding-bottom: 40xp;
+  
+}
+
+.news-wrapper a {
+  text-decoration: none;
+  color: black;
 }
 
 .news-contents:hover {
@@ -207,6 +217,7 @@ main div.animal {
   width: 600px;
   padding: 0 15px;
   margin: 0 auto;
+  
 }
 
 .news-wrapper li {
@@ -216,6 +227,7 @@ main div.animal {
   border-bottom:2px solid gray;
   display: inline-block;
   padding-bottom: 30px;
+  
 }
 
 time {
@@ -243,32 +255,48 @@ time {
   font-size: 20px;
   display: inline-block;
   opacity: 1;
+  text-decoration: none;
 }
 
 .btn-news:hover {
   opacity: 0.6;
 }
 
-.footer-link-box {
-  display: flex;
-}
-
 .footer {
   height: 300px;
   background-color: rgb(44, 44, 44);
   margin: 0 auto;
+  text-decoration: none;
+}
 
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-top {
+  padding-top: 3%;
+  width: 980px;
+  margin: auto;
+}
+
+.footer-link-box {
+  padding-right: 6%;
+  float: left;
+}
+
+.footer-link-box-title {
+  display: inline-block;
 }
 
 .flex-list {
   list-style: none;
+  padding-left: 0px;
  }
 
-footer-link-box-item {
-  flex: auto;
-
+.footer-link-box-item {
+  padding-top: 1%;
 }
-
 
 /* これより下はJS */
 

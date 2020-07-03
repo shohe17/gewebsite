@@ -1,14 +1,9 @@
 <?php 
   require_once('getActivity.php');
-?>
+  require_once('getMembers.php');
+  require_once('getNews.php');
 
-<!-- 
-<?php 
 
-require_once('getMembers.php');
-?> -->
-
-<?php 
   $num = rand(0, 2);
   $languages = ['spaingo', 'tyuugokugo', 'rosiago'];
   // ニュースをデータベースからとってきて画面に表示する
@@ -16,9 +11,6 @@ require_once('getMembers.php');
   // SQLを実行する
   // 実行した結果を変数に代入する
   // 変数の内容を画面に表示する
- 
-  require_once('getNews.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -70,21 +62,9 @@ require_once('getMembers.php');
         <div class="images">
           <?php foreach($activity as $action): ?>
             <div class="image">
-              <p class="name-activity"><?php echo $action['title'] ?></p>
-              <img id="res2" class="thumbnail300 res"  src="./assets/images/moal.jpeg" alt="beach">
-              <p class="text-contents"><?php echo $action['body'] ?></p>
-              <a href="#" class="btn seemore">See more</a>
-            </div>
-            <div class="image">
-              <p class="name-activity"><?php echo $action['title'] ?></p>
-              <img id="res3" class="thumbnail300 res" src="./assets/images/omutsu.jpeg" alt="basuket">
-              <p class="text-contents"><?php echo $action['body'] ?></p>
-              <a href="#" class="btn seemore">See more</a>
-            </div>
-            <div class="image">
-              <p class="name-activity"><?php echo $action['title'] ?></p>
-              <img id="res4" class="thumbnail300 res" src="./assets/images/uchu.jpeg" alt="uchu">
-              <p class="text-contents"><?php echo $action['body'] ?></p>
+              <p class="name-activity"><?php echo $action['action'] ?></p>
+              <img id="res2" class="thumbnail300 res" src="<?php echo $action['image_at'] ?>" alt="beach">
+              <p class="text-contents"><?php echo $action['description'] ?></p>
               <a href="#" class="btn seemore">See more</a>
             </div>
           <?php endforeach ?>
@@ -98,19 +78,12 @@ require_once('getMembers.php');
         <h1 class="member-title">組織構成員</h1>
       </div>
       <div class="characters">
-        <div class="character">
-          <img class="thumbnail2" src="./assets/images/ichi.jpeg" alt="Ichi">
-        </div>
-        <div class="character">
-          <img class="thumbnail2" src="./assets/images/atsu2.jpeg" alt="Atsu">
-        </div>
-        <div class="character">
-          <img class="thumbnail2" src="./assets/images/so.jpeg" alt="So">
-        </div>
-        <div class="character">
-          <img class="thumbnail2" src="./assets/images/sho.jpeg" alt="Sho">
-        </div>
+        <?php foreach($members as $member ): ?>
+          <div class="character">
+            <img class="thumbnail2" src="<?php echo $member['image_at'] ?>" alt="<?php echo $member['name'] ?>">
+          </div>
         <a href="#" class="btn-team">See more</a>
+        <?php endforeach ?>
       </div>
     </div>
 
@@ -120,17 +93,9 @@ require_once('getMembers.php');
         <?php foreach($news as $article): ?>
           <li>
             <time datetime="2020-5-15T15:00"><?php echo $article['date'] ?></time>
-            <div class="news-contents"><a href="#"><?php echo $article['body']   ?></a></div>
+            <div class="news-contents"><a href="#"><?php echo $article['description'] ?></a></div>
           </li>
         <?php endforeach ?>
-        <!-- <li>
-          <time datetime="2020-5-15T15:00">2020年5月15日</time>
-          <div class="news-contents"><a href="#">AとIがSをおいて、マニラ乗り継ぎで無事東京に帰国し、それぞれの旅路についた。これまでの経験や個々の能力を活かして前に進む姿はまるでジョジョの奇妙な冒険のようだ。</a></div>
-        </li>
-        <li>
-          <time datetime="2020-6-13T15:00">2020年6月12日</time>
-          <div class="news-contents"><a href="#">Sが韓国乗り継ぎで無事関西に帰国。これまでの経験や能力を活かして前に進む姿はまるでジョジョの奇妙な冒険のようだ。</a></div>
-        </li> -->
       </ul>
     </div>
   </div>
@@ -140,31 +105,42 @@ require_once('getMembers.php');
       <a href="#" class="btn-news">See more</a>
     </div>
   </div>
+  <!-- <div class="footer">
+    <div class="footer-title">
+      <a class="footer-link-box-title">組織情報</a>
+      <ul class="flex-list">
+        <li class="footer-link-box-item"><a href="#">ミッション</a></li>
+        <li class="footer-link-box-item"><a href="#">所在地</a></li>
+      </ul>  
+    </div>
+
+  </div> -->
+
   <div class="footer">
     <div class="footer-top">
       <div class="footer-link-box">
-        <div class="footer-link-box-title">組織情報</div>
+        <a class="footer-link-box-title">組織情報</a>
         <ul class="flex-list">
           <li class="footer-link-box-item"><a href="#">ミッション</a></li>
           <li class="footer-link-box-item"><a href="#">所在地</a></li>
         </ul>
       </div>
       <div class="footer-link-box">
-        <div class="footer-link-box-title">活動内容</div>
+        <a class="footer-link-box-title">活動内容</a>
         <ul class="flex-list">
           <li class="footer-link-box-item"><a href="#">新拠点開拓チーム</a></li>
           <li class="footer-link-box-item"><a href="#">バスケットボールチーム</a></li>
-          <li class="footer-link-box-item"><a href="#">宇宙探索</a></li>
+          <li class="footer-link-box-item"><a href="#">宇宙探索チーム</a></li>
         </ul>
       </div>
       <div class="footer-link-box">
-        <div class="footer-link-box-title">組織構成員</div>
+        <a class="footer-link-box-title">組織構成員</a>
         <ul class="flex-list">
           <li class="footer-link-box-item"><a href="#">構成員紹介</a></li>
         </ul>
       </div>
       <div class="footer-link-box">
-        <div class="footer-link-box-title">ニュース</div>
+        <a class="footer-link-box-title">ニュース</a>
         <ul class="flex-list">
           <li class="footer-link-box-item"><a href="#">ニュース</a></li>
           <li class="footer-link-box-item"><a href="#">ブログ</a></li>
